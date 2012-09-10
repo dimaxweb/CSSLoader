@@ -1,0 +1,33 @@
+{
+  "name": "RequireCSS",
+  "title": "Require CSS plugin",
+  "description": "Plugin for reliably loading css files",
+  "version": "0.1.0",
+  "homepage": "RequireJS CSS plugin",
+  "author": {
+    "name": "Dmitry Mogilko",
+    "email": "dimitry323@gmail.com",
+    "url": "http://www.dimaxweb.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dmitrym/RequireCSS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmitrym/RequireCSS/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "RequireJS CSS plugin/blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "RequireJS CSS plugin/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">= 1.6"
+  },
+  "keywords": []
+}
