@@ -5,8 +5,8 @@ Plugin for reliably loading css files
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/dmitrym/RequireCSS/dist/css.min.js
-[max]: https://raw.github.com/dmitrym/RequireCSS/dist/css.js
+[min]: https://github.com/dmitrym/RequireCSS/dist/css.min.js
+[max]: https://github.com/dmitrym/RequireCSS/dist/css.js
 
 ## Documentation
 _(Coming soon)_
