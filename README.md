@@ -5,20 +5,8 @@ Plugin for reliably loading css files
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/dmitrym/RequireCSS/master/dist/RequireCSS.min.js
-[max]: https://raw.github.com/dmitrym/RequireCSS/master/dist/RequireCSS.js
-
-In your web page:
-
-```html
-<script src="jquery.js"></script>
-<script src="dist/RequireCSS.min.js"></script>
-<script>
-jQuery(function($) {
-  $.awesome(); // "awesome"
-});
-</script>
-```
+[min]: https://raw.github.com/dmitrym/RequireCSS/master/dist/css.min.js
+[max]: https://raw.github.com/dmitrym/RequireCSS/master/dist/css.js
 
 ## Documentation
 _(Coming soon)_
