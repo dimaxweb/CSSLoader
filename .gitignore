@@ -134,10 +134,9 @@ Desktop.ini
 *.py[co]
 
 # Packages
-*.egg
-*.egg-info
-dist
-build
+*.eggo
+     build
+*.egg-inf
 eggs
 parts
 bin

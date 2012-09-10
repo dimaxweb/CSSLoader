@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     min: {
       dist: {
         src: ['src/css.js'],
-        dest: 'dist/css.js'
+        dest: 'src/css.js'
       }
     },
     qunit: {
