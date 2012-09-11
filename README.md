@@ -3,10 +3,12 @@
 Plugin for reliably loading css files
 
 ##Inspiration
-The main issue with loading and waiting for css files, is actually not “loading” but “waiting” when stylesheeet id downloaded and applied on DOM. Described here: http://requirejs.org/docs/faq-advanced.html#css and here : https://github.com/jrburke/requirejs/issues/154
+The main issue with loading and waiting for css files, is actually not “loading” but “waiting” when stylesheeet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
 After looking on existing plugins and approaches I came to conclusion that in order to address “waiting” issue the bellow things needs to be addressed first: 
+
 1.  Reliably understand if browser support “load” event on “link” element.
-2. Reliably understand if style sheet is applied on DOM when native “load” event doesn’t provided by browser.
+1. Reliably understand if style sheet is applied on DOM when native “load” event doesn’t provided by browser.
+
 After thorough testing everything looks addressed and working!
 
 ## Getting Started
