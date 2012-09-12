@@ -1,4 +1,4 @@
-# Require CSS plugin
+# RequireJs  CssLoader  
 
 RequireJs plugin for reliably loading and waiting for css files
 
