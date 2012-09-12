@@ -28,7 +28,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ##Credits
 [Understanding if event is supported on element](http://perfectionkills.com/detecting-event-support-without-browser-sniffing).
 *Worth to add that I first came to that approach when walking through the jQuery code.
-[Get identification wehn css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
+[Get identification when css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
 
 ### Important notes
 Please don't edit files in the `dist` subdirectory as they are generated via grunt. You'll find source code in the `src` subdirectory!
