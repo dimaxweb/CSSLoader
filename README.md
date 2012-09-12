@@ -1,6 +1,6 @@
 # Require CSS plugin
 
-Plugin for reliably loading css files
+RequireJs plugin for reliably loading and waiting for css files
 
 ##Inspiration
 The main issue with loading and waiting for css files, is actually not “loading” but “waiting” when stylesheeet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
