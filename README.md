@@ -25,6 +25,11 @@ Licensed under the MIT, GPL licenses.
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
+##Credits
+1.(Understanding if event is supported on element)[http://perfectionkills.com/detecting-event-support-without-browser-sniffing].
+*Worth to add that I first came to approach when walking through the jQuery code.
+1.(Get identification wehn css is applied to DOM)[http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading]
+
 ### Important notes
 Please don't edit files in the `dist` subdirectory as they are generated via grunt. You'll find source code in the `src` subdirectory!
 
