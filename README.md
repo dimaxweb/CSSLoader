@@ -18,17 +18,17 @@ Download the [production version][min] or the [development version][max].
 [max]: https://github.com/dmitry1978/RequireCSS/blob/master/src/css.js
 
 
+##Credits
+[Understanding if event is supported on element](http://perfectionkills.com/detecting-event-support-without-browser-sniffing).
+*Worth to add that I first came to that approach when walking through the jQuery code.
+[Get identification when css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
+
 
 ## License
 Licensed under the MIT, GPL licenses.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
-
-##Credits
-[Understanding if event is supported on element](http://perfectionkills.com/detecting-event-support-without-browser-sniffing).
-*Worth to add that I first came to that approach when walking through the jQuery code.
-[Get identification when css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
 
 ### Important notes
 Please don't edit files in the `dist` subdirectory as they are generated via grunt. You'll find source code in the `src` subdirectory!
