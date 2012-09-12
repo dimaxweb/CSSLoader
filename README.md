@@ -20,7 +20,8 @@ Download the [production version][min] or the [development version][max].
 
 ##Credits
 [Understanding if event is supported on element](http://perfectionkills.com/detecting-event-support-without-browser-sniffing).
-*Worth to add that I first came to that approach when walking through the jQuery code.
+* Worth to add that I first came to that approach when walking through the jQuery code.
+
 [Get identification when css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
 
 
