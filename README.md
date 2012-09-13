@@ -14,8 +14,8 @@ After thorough testing everything looks addressed and working!
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://github.com/dmitry1978/RequireCSS/blob/master/dist/css.js
-[max]: https://github.com/dmitry1978/RequireCSS/blob/master/src/css.js
+[min]: https://github.com/dmitry1978/CssLoader/blob/master/dist/css.js
+[max]: https://github.com/dmitry1978/CssLoader/blob/master/src/css.js
 
 
 ##Credits
