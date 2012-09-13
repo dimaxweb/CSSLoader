@@ -1,6 +1,6 @@
 {
-  "name": "RequireCSS",
-  "title": "Require CSS plugin",
+  "name": "CssLoader",
+  "title": "RequireJS CSS loader plugin",
   "description": "Plugin for reliably loading css files",
   "version": "0.1.0",
   "homepage": "RequireJS CSS plugin",
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dmitrym/RequireCSS.git"
+    "url": "git://github.com/dmitrym/CssLoader.git"
   },
   "bugs": {
-    "url": "https://github.com/dmitrym/RequireCSS/issues"
+    "url": "https://github.com/dmitrym/CssLoader/issues"
   },
   "licenses": [
     {
