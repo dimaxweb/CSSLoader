@@ -1,15 +1,14 @@
-# RequireJs  CssLoader  
-
-RequireJs plugin for reliably loading and waiting for css files
+# RequireJs  plugin -  CssLoader  (css!)
+RequireJs plugin for reliably loading and waiting for css files.
 
 ##Inspiration
 The main issue with loading and waiting for css files, is actually not “loading” but “waiting” when stylesheeet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
 After looking on existing plugins and approaches I came to conclusion that in order to address “waiting” issue the bellow things needs to be addressed first: 
 
-1.  Reliably understand if browser support “load” event on “link” element.
-1. Reliably understand if style sheet is applied on DOM when native “load” event doesn’t provided by browser.
+1. Reliably understand if browser support “load” event on “link” element.
+1. Reliably understand if style sheet is applied on DOM when native “load” event doesn't provided by browser.
 
-After thorough testing everything looks addressed and working!
+Because of lot of caveats with css loading in different browsers I tried to thoroughly [test](https://github.com/dmitry1978/CssLoader/blob/master/test/unit/all.html) the plugin.
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
@@ -17,11 +16,17 @@ Download the [production version][min] or the [development version][max].
 [min]: https://github.com/dmitry1978/CssLoader/blob/master/dist/css.js
 [max]: https://github.com/dmitry1978/CssLoader/blob/master/src/css.js
 
+##Compatability
+Tested on :
+IE7,IE8,IE9
+Firebox: 10.0.2
+Chrome 21.0
+Opera:12.02
+Safari:5.17
 
 ##Credits
 [Understanding if event is supported on element](http://perfectionkills.com/detecting-event-support-without-browser-sniffing).
 * Worth to add that I first came to that approach when walking through the jQuery code.
-
 [Get identification when css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
 
 
@@ -29,7 +34,7 @@ Download the [production version][min] or the [development version][max].
 Licensed under the MIT, GPL licenses.
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
 ### Important notes
 Please don't edit files in the `dist` subdirectory as they are generated via grunt. You'll find source code in the `src` subdirectory!
