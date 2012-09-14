@@ -8,7 +8,7 @@ After looking on existing plugins and approaches I came to conclusion that in or
 1. Reliably understand if browser support “load” event on “link” element.
 1. Reliably understand if style sheet is applied on DOM when native “load” event doesn't provided by browser.
 
-Because of lot of caveats with css loading in different browsers I tried to thoroughly [test](https://github.com/dmitry1978/CssLoader/blob/master/test/unit/all.html) the plugin.
+Because of lot of caveats with css loading in different browsers I tried to [test](https://github.com/dmitry1978/CssLoader/blob/master/test/unit/all.html) each method of the plugin thoroughly.
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].

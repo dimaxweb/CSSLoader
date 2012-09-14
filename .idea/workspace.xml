@@ -22,19 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="46" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+            <state line="10" column="192" selection-start="932" selection-end="932" vertical-scroll-proportion="0.20531401">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="all.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit/all.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="39" selection-start="94" selection-end="94" vertical-scroll-proportion="0.08343558">
+            <state line="4" column="39" selection-start="94" selection-end="94" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
@@ -63,8 +63,8 @@
         <option value="$PROJECT_DIR$/src/css.js" />
         <option value="$PROJECT_DIR$/test/functional/pluginTest.js" />
         <option value="$PROJECT_DIR$/test/unit/CssLoader_Test.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/unit/all.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -407,16 +407,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/test/unit/all.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+        <state line="4" column="39" selection-start="94" selection-end="94" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/all.html">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="94" selection-end="94" vertical-scroll-proportion="0.08343558">
+        <state line="10" column="192" selection-start="932" selection-end="932" vertical-scroll-proportion="0.20531401">
           <folding />
         </state>
       </provider>
