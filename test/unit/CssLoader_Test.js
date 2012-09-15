@@ -27,7 +27,7 @@ test("Native load not supported - 404 css url",function(){
     var testComplete = function(calledError){
         start();
         equal(calledError,true,'Error function is called when css file is not exists');
-    }
+    };
     var callback  = function(loaded){
 
         //fail the test
@@ -51,7 +51,7 @@ test("Native load not supported - not valid css file(can occur  when server retu
     var testComplete = function(calledError){
         start();
         equal(calledError,true,'Error function is called when css file is not exists');
-    }
+    };
     var callback  = function(loaded){
         //fail the test
         testComplete(false);
@@ -72,7 +72,7 @@ test("Existing valid css - callback called",function(){
     var testComplete = function(calledCallback){
         start();
         equal(calledCallback,true,'Callback called when css is valid');
-    }
+    };
     var callback  = function(loaded){
 
         //fail the test
@@ -94,7 +94,7 @@ test('Cross Domain CSS',function(){
     var testComplete = function(calledCallback){
         start();
         equal(calledCallback,true,'Callback called when css is valid');
-    }
+    };
     var callback  = function(loaded){
 
         //fail the test
