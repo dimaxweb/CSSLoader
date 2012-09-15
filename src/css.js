@@ -70,10 +70,10 @@
                                         //check if stylesheet has cssRules collection,because server can return some html in case of 404 ,making ownerNode to be created
                                         var cssRulesAllowed = true;
                                         var cssRules = null;
-                                        //Check if access to rules is allowed
+                                        //Check if access to rules is allowed,if generates Security exception - looks css from different domain and we can't reliably check rules
                                         try {
 
-                                            //can be also null like in Google chrome  or undefined like in IE8,7
+                                            //can be also null like in Google chrome or undefined like in IE8,7
                                             if (!g.cssRules) {
                                                 if (g.rules) {
                                                     cssRules = g.rules;
