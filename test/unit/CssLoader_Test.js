@@ -110,6 +110,26 @@ test('Cross Domain CSS',function(){
     css._loadWhenNotSupported(urlTextFile,callback);
 });
 
+
+test('IE version',function(){
+    expect(1);
+    var css = window['css'];
+    var isIE = (navigator.appName === 'Microsoft Internet Explorer');
+    if(isIE){
+        var version = css._getIEVersion();
+        notEqual(version,-1,'IE version is :' + version);
+    }
+    else{
+        ok(true,'Not IE - pass the test');
+    }
+
+});
+
+
+
+
+
+
 //TODO : looks like not deterministic test
 //test('Cross Domain CSS - 404 css',function(){
 //    expect(1);

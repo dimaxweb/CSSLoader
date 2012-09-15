@@ -2,14 +2,17 @@
 RequireJs plugin for reliably loading and waiting for css files.
 
 ##Inspiration
-The main issue with loading and waiting for css files, is actually not “loading” but “waiting” when stylesheeet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
-After looking on existing plugins and approaches I came to conclusion that in order to address “waiting” issue the bellow things needs to be addressed first: 
+Need for well tested and reliable plugin for loading css resources using RequireJs also supporting the [RequireJs optimizer](https://github.com/jrburke/r.js).
+The main issue with loading and waiting for css files, is actually not “loading” (I found only IE 31 stylesheet limit problematic,described below) but “waiting” when stylesheet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
 
+### Approach
+After looking on existing plugins and approaches I came to conclusion that in order to address “waiting” issue the bellow things needs to be addressed first:
 1. Reliably understand if browser support “load” event on “link” element.
 1. Reliably understand if style sheet is applied on DOM when native “load” event doesn't provided by browser.
 
-Because of lot of caveats with css loading in different browsers I tried to test each approach used in plugin thoroughly.
+Plugin logic contains the workaround for [IE 31 stylesheet limit](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx).
 
+Because of lot of caveats in different browsers each approach used in plugin is tested thoroughly.
 All the tests can be [found here](https://github.com/dmitry1978/CssLoader/blob/master/test/unit).
 
 ## Getting Started
@@ -33,8 +36,12 @@ Safari:5.17
 [Get identification when css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
 
 
+##TODO:
+Check that stylesheet not only applied to DOM but also that rules are applied on stylesheets loaded from another domain.
+
 ## License
 Licensed under the MIT, GPL licenses.
+
 
 ## Contributing
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).

@@ -4,7 +4,8 @@
 
 (function () {
     "use strict";
-    var doc = document, head = doc.getElementsByTagName("head")[0];
+    var doc = document, head = doc.getElementsByTagName("head")[0],IE7_8_9_StylesheetLimit = 30;
+    //TODO : think about if I need define always
     define(function () {
         var css;
         return css = {
@@ -22,7 +23,44 @@
 //                    .replace(/[\u2029]/g, "\\u2029");
 //            },
 
-            _getUniqueId:function () {
+            _getIEVersion:function(){
+            // Returns the version of Internet Explorer or a -1
+            // (indicating the use of another browser).
+
+            var rv = -1; // Return value assumes failure.
+            if (navigator.appName === 'Microsoft Internet Explorer')
+            {
+                var ua = navigator.userAgent;
+                var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                if (re.exec(ua) != null)
+                    rv = parseFloat( RegExp.$1 );
+            }
+            return rv;
+        },
+
+        _checkIeLimitWorkaround:function (url, callback) {
+                var loadedWithWorkaround = false;
+                var version = this._getIEVersion();
+                var ieAndVersion = (version!==-1 && version <=9) ? true : false;
+                try {
+                    //workaround for loading IE 31 stylesheet limit
+                    // (http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx)
+                    if (doc.createStyleSheet && doc.styleSheets && doc.styleSheets.length > IE7_8_9_StylesheetLimit) {
+                        var lastStylesheet = doc.styleSheets[doc.styleSheets.length - 1];
+                        lastStylesheet.addImport(url, doc.styleSheets.length - 1);
+                        loadedWithWorkaround = true;
+                        callback();
+
+                    }
+                }
+                catch (e) {
+                    this._onerror(callback, e);
+                    loadedWithWorkaround = false;
+                }
+                return loadedWithWorkaround;
+        },
+
+        _getUniqueId:function () {
                 return"cssPreloader_" + Math.round(Math.random() * 9999999999);
             },
             _createLink:function (url) {
@@ -35,6 +73,7 @@
                 var isEventSupported = event in c;
                 return isEventSupported || (c.setAttribute(event, "return;"), isEventSupported = typeof c[event] == "function"), c = null, isEventSupported
             },
+
             _loadNative:function (url, callback) {
                 var link = this._createLink(url);
                 link.onload = function () {
@@ -57,9 +96,9 @@
                 }
             },
 
-            _loadWhenNotSupported:function (url, callback) {
 
-                var checkLoaded = function (stylesheetLink, callback, attemptsCount) {
+            _loadWhenNotSupported:function (url, callback) {
+             var checkLoaded = function (stylesheetLink, callback, attemptsCount) {
                         try {
                             if (attemptsCount < this.maxAttempts) {
                                 var stylesheets = document.styleSheets;
@@ -75,6 +114,7 @@
 
                                             //can be also null like in Google chrome or undefined like in IE8,7
                                             if (!g.cssRules) {
+                                                //IE7 and IE8 css rules collection
                                                 if (g.rules) {
                                                     cssRules = g.rules;
                                                 }
@@ -104,7 +144,7 @@
 
                                         }
                                         //Can't  check for 100% if css is loaded when no access to cssRules (stylesheet from different domain),
-                                        //so make optimistic  assumption css is loaded  if has ownerNode with matching id
+                                        //so make optimistic  assumption css rules are valid and are applied  if has ownerNode with matching id
                                         else {
                                             callback();
                                         }
@@ -118,7 +158,7 @@
                                     checkLoaded.call(that, stylesheetLink, callback, ++attemptsCount);
                                 }, 100);
                             }
-                            //not loaded with maximum  attempts
+                            //not loaded with maximum attempts
                             else {
                                 this._onerror(callback);
                                 return;
@@ -130,10 +170,10 @@
                             return;
                         }
 
-                    },
+                    };
 
 
-                    link = this._createLink(url);
+                var link = this._createLink(url);
                 head.appendChild(link);
                 var that = this, attemptsCount = 0;
                 //TODO : calculate setTimeout according to wait interval
@@ -143,20 +183,25 @@
 
 
             },
-            _loadStylesheet:function (url, callback) {
-                if (this._isEventSupported("link", "load")) {
+
+            loadStylesheet:function (url, callback) {
+            var loadedWithWorkaround = this._checkIeLimitWorkaround(url,callback);
+             if(!loadedWithWorkaround){
+             if (this._isEventSupported("link", "load")) {
                     this._loadNative(url, callback);
-                }
-                else {
+             }
+             else {
                     this._loadWhenNotSupported(url, callback);
                 }
+             }
+
             },
 
             ///requireJS interface function  - called css! is called
             load:function (name, parentConf, load, config) {
                 try {
-                    var url = parentConf.toUrl(name.search(/\.(css|less|scss)$/i) === -1 ? name + ".css" : name);
-                    this._loadStylesheet(url, load);
+                    var url = parentConf.toUrl(name.search(/\.(css)$/i) === -1 ? name + ".css" : name);
+                    this.loadStylesheet(url, load);
                 }
                 catch (e) {
                     load();
