@@ -2,7 +2,7 @@
 RequireJs plugin for reliably loading and waiting for css files.
 
 ##Inspiration
-Need for well tested and reliable plugin for loading css resources using RequireJs also supporting the [RequireJs optimizer](https://github.com/jrburke/r.js).
+Need for well tested and reliable plugin for loading css resources using RequireJs.
 The main issue with loading and waiting for css files, is actually not “loading” (I found only IE 31 stylesheet limit problematic,described below) but “waiting” when stylesheet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
 
 ### Approach
