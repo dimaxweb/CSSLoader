@@ -7,6 +7,7 @@ The main issue with loading and waiting for css files, is actually not “loadin
 
 ### Approach
 After looking on existing plugins and approaches I came to conclusion that in order to address “waiting” issue the bellow things needs to be addressed first:
+
 1. Reliably understand if browser support “load” event on “link” element.
 1. Reliably understand if style sheet is applied on DOM when native “load” event doesn't provided by browser.
 
