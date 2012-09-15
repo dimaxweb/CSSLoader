@@ -3,7 +3,7 @@
   "title": "RequireJS CSS loader plugin",
   "description": "Plugin for reliably loading css files",
   "version": "0.1.0",
-  "homepage": "RequireJS CSS plugin",
+  "homepage": "RequireJS CSS Loader plugin",
   "author": {
     "name": "Dmitry Mogilko",
     "email": "dimitry323@gmail.com",
@@ -19,11 +19,11 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "RequireJS CSS plugin/blob/master/LICENSE-MIT"
+      "url": "RequireJS CSSLoader plugin/blob/master/LICENSE-MIT"
     },
     {
       "type": "GPL",
-      "url": "RequireJS CSS plugin/blob/master/LICENSE-GPL"
+      "url": "RequireJS CSSLoader   plugin/blob/master/LICENSE-GPL"
     }
   ],
   "dependencies": {

@@ -33,10 +33,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="47" selection-start="193" selection-end="193" vertical-scroll-proportion="0.33633092">
+            <state line="12" column="86" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="39" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,15 +58,23 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="grunt.cmd" />
+    </commandsHistory>
+  </component>
   <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/test/unit/CSSLoader.html" />
         <option value="$PROJECT_DIR$/RequireCSS.jquery.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/grunt.js" />
         <option value="$PROJECT_DIR$/test/unit/basicTest.css" />
         <option value="$PROJECT_DIR$/test/unit/textCss" />
@@ -68,6 +85,8 @@
         <option value="$PROJECT_DIR$/src/css.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/CSSLoader.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -136,12 +155,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\inetpub\wwwroot\projects\CSSLoader\test\functional" />
       <recent name="C:\inetpub\wwwroot\projects\CSSLoader\test\unit" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\inetpub\wwwroot\projects\CSSLoader\libs" />
     </key>
   </component>
   <component name="RunManager">
@@ -210,7 +236,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -219,6 +245,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -284,23 +311,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSSLoader.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="64" selection-start="585" selection-end="585" vertical-scroll-proportion="0.44470868">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/css.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="617" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/functional/basicTest2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="1" selection-start="81" selection-end="81" vertical-scroll-proportion="0.10107016">
@@ -350,13 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/functional/pluginTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/CssLoader_Test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="112" column="42" selection-start="3201" selection-end="3201" vertical-scroll-proportion="0.0">
@@ -387,9 +390,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="617" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/functional/pluginTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="312" selection-end="312" vertical-scroll-proportion="0.27517986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSSLoader.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="33" selection-start="559" selection-end="559" vertical-scroll-proportion="0.6420863">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="193" selection-end="193" vertical-scroll-proportion="0.33633092">
+        <state line="12" column="86" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="39" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
