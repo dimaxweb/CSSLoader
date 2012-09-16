@@ -1,8 +1,9 @@
-# RequireJs  plugin -  CssLoader  (css!)
+#  CssLoader  (css!)  -   RequireJs  plugin 
 RequireJs plugin for reliably loading and waiting for css files.
 
 ##Inspiration
 Need for well tested and reliable plugin for loading css resources using RequireJs.
+
 The main issue with loading and waiting for css files, is actually not “loading” (I found only IE 31 stylesheet limit problematic,described below) but “waiting” when stylesheet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
 
 ### Approach
@@ -11,10 +12,10 @@ After looking on existing plugins and approaches I came to conclusion that in or
 1. Reliably understand if browser support “load” event on “link” element.
 1. Reliably understand if style sheet is applied on DOM when native “load” event doesn't provided by browser.
 
-Plugin logic contains the workaround for [IE 31 stylesheet limit](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx).
+Plugin logic also contains the workaround for [IE 31 stylesheet limit](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx).
 
 Because of lot of caveats in different browsers each approach used in plugin is tested thoroughly.
-All the tests can be [found here](https://github.com/dmitry1978/CssLoader/blob/master/test/unit).
+All the tests done using [Qunit](http://qunitjs.com/) and  can be [found here](https://github.com/dmitry1978/CssLoader/blob/master/test/unit).
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
