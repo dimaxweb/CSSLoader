@@ -41,6 +41,8 @@ Safari:5.17
 ##TODO:
 Check that stylesheet not only applied to DOM but also that rules are applied on stylesheets loaded from another domain.
 
+Support for [Requirejs optimizer](https://github.com/jrburke/r.js).
+
 ## License
 Licensed under the MIT, GPL licenses.
 
