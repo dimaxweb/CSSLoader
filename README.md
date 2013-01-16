@@ -20,8 +20,8 @@ All the tests done using [Qunit](http://qunitjs.com/) and  can be [found here](h
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://github.com/dmitry1978/CssLoader/blob/master/dist/css.js
-[max]: https://github.com/dmitry1978/CssLoader/blob/master/src/css.js
+[min]: https://github.com/dimaxweb/CSSLoader/tree/master/css.js
+[max]: https://github.com/dimaxweb/CSSLoader/tree/master/src/css.js
 
 ##Compatability
 Tested on :
