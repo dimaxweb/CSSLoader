@@ -15,7 +15,7 @@ After looking on existing plugins and approaches I came to conclusion that in or
 Plugin logic also contains the workaround for [IE 31 stylesheet limit](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx).
 
 Because of lot of caveats in different browsers each approach used in plugin is tested thoroughly.
-All the tests done using [Qunit](http://qunitjs.com/) and  can be [found here](https://github.com/dmitry1978/CssLoader/blob/master/test/unit).
+All the tests done using [Qunit](http://qunitjs.com/) and  can be [found here](https://github.com/dimaxweb/CSSLoader/tree/master/test).
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
