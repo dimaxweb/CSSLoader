@@ -21,9 +21,10 @@ Download the [production version][min] or the [development version][max].
 [min]: https://github.com/dimaxweb/CSSLoader/tree/master/dist/css.js
 [max]: https://github.com/dimaxweb/CSSLoader/tree/master/src/css.js
 
-## Usage
-You can specify a `.css ` file resource as a requirejs dependency by using below `css!` syntax. Note that it works completely similar to require.js's 'standard' `text!` [loader plugin](http://requirejs.org/docs/api.html#plugins):
+## Usage (example)
+You can specify a `.css ` file resource as a requirejs dependency by using below `css!` syntax. Note that it works completely similar to require.js's 'standard' `text!` [loader plugin](http://requirejs.org/docs/api.html#plugins). Here is an example:
 
+```javascript
 require.config({
     // baseUrl: 'Scripts',  <-- baseUrl had to be commented out because the .css file is located at 'Content/bootstrap.css' (and not 'Scripts/Content/bootstrap.css').
     paths: {
@@ -31,17 +32,19 @@ require.config({
         "bootstrap": "Scripts/bootstrap.min",
         "bootbox": "Scripts/bootbox.min",
 		...
-        "css": "Scripts/css.min"
+        "css": "Scripts/css.min"   // <- Step 1: Add the 'css.min.js' (or css.js) to your requirejs config.
     },
     shim: {
         "bootstrap": { "deps": ['jquery'] }
     }
 });
 
-require(['jquery', 'bootstrap', 'bootbox', 'css!Content/bootstrap.css'], function($,bootstrap,bootbox) {
-	bootbox.confirm(..  // The confirm is shown with the correct layout!
-	...
+require(['jquery', 'bootstrap', 'bootbox', 'css!Content/bootstrap.css'],  // <- Step 2: add the .css URL as a dependency with the 'css!' loader plugin before it.
+	function($,bootstrap,bootbox) {
+		bootbox.confirm(..  // The confirm is shown with the correct layout!
+		...
 });
+```
 
 ##Compatability
 Tested on :
