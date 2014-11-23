@@ -2,26 +2,49 @@
 RequireJs plugin for reliably loading and waiting for css files.
 
 ##Inspiration
-Need for well tested and reliable plugin for loading css resources using RequireJs.
+There is a need for a well tested and reliable plugin for loading css resources using RequireJs.
 
-The main issue with loading and waiting for css files, is actually not “loading” (I found only IE 31 stylesheet limit problematic,described below) but “waiting” when stylesheet is downloaded and applied on DOM. Described  [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
+The main issue with loading and waiting for css files, is actually not “loading” (I found only IE 31 stylesheet limit problematic,described below) but “waiting” for when the stylesheet is downloaded and available in the DOM. This is further described [here](http://requirejs.org/docs/faq-advanced.html#css) and [here](https://github.com/jrburke/requirejs/issues/154).
 
 ### Approach
-After looking on existing plugins and approaches I came to conclusion that in order to address “waiting” issue the bellow things needs to be addressed first:
-
+After looking at existing plugins and approaches I came to conclusion that in order to address “waiting” issue the following things needed to be addressed first:
 1. Reliably understand if browser support “load” event on “link” element.
-1. Reliably understand if style sheet is applied on DOM when native “load” event doesn't provided by browser.
+2. Reliably understand if style sheet is applied on DOM when native “load” event doesn't provided by browser.
 
-Plugin logic also contains the workaround for [IE 31 stylesheet limit](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx).
+The plugin logic also contains the workaround for [IE 31 stylesheet limit](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx).
 
-Because of lot of caveats in different browsers each approach used in plugin is tested thoroughly.
-All the tests done using [Qunit](http://qunitjs.com/) and  can be [found here](https://github.com/dimaxweb/CSSLoader/tree/master/test).
+Because there are a lot of caveats in different browsers each approach used in plugin is tested thoroughly.
+There are [Qunit](http://qunitjs.com/) unit tests available which can be [found here](https://github.com/dimaxweb/CSSLoader/tree/master/test).
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
-
 [min]: https://github.com/dimaxweb/CSSLoader/tree/master/dist/css.js
 [max]: https://github.com/dimaxweb/CSSLoader/tree/master/src/css.js
+
+## Usage (example)
+You can specify a `.css ` file resource as a requirejs dependency by using below `css!` syntax. Note that it works completely similar to require.js's 'standard' `text!` [loader plugin](http://requirejs.org/docs/api.html#plugins). Here is an example:
+
+```javascript
+require.config({
+    // baseUrl: 'Scripts',  <-- baseUrl had to be commented out because the .css file is located at 'Content/bootstrap.css' (and not 'Scripts/Content/bootstrap.css').
+    paths: {
+        "jquery": "Scripts/jquery-1.11.1.min",
+        "bootstrap": "Scripts/bootstrap.min",
+        "bootbox": "Scripts/bootbox.min",
+		...
+        "css": "Scripts/css.min"   // <- Step 1: Add the 'css.min.js' (or css.js) to your requirejs config.
+    },
+    shim: {
+        "bootstrap": { "deps": ['jquery'] }
+    }
+});
+
+require(['jquery', 'bootstrap', 'bootbox', 'css!Content/bootstrap.css'],  // <- Step 2: add the .css URL as a dependency with the 'css!' loader plugin before it.
+	function($,bootstrap,bootbox) {
+		bootbox.confirm(..  // The confirm is shown with the correct layout!
+		...
+});
+```
 
 ##Compatability
 Tested on :
@@ -32,7 +55,7 @@ Opera:12.02,
 Safari:5.17
 
 ##Credits
-[Understanding if event is supported on element](http://perfectionkills.com/detecting-event-support-without-browser-sniffing).
+[Understanding if an event is supported on an element](http://perfectionkills.com/detecting-event-support-without-browser-sniffing).
 * Worth to add that I first came to that approach when walking through the jQuery code.
 
 [Get identification when css is applied to DOM](http://yearofmoo.com/2011/03/cross-browser-stylesheet-preloading).
